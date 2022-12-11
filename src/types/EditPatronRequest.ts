@@ -4,9 +4,9 @@
     firstName: string,
     lastName: string,
     address: string,
-    dateOfBirth: Date,
+    dateOfBirth: string,
     email: string,
     mobile: string,
-    issued: Date | null,
+    issued: string | null,
     multipleCheckoutLimit: number
 }  
