@@ -1,9 +1,9 @@
 import {PatronResponse} from "../../types/PatronResponse";
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import PatronService from "../../services/PatronService";
 import PatronsTable from "../../components/PatronsTable";
 
-interface State {
+type State = {
     loading: boolean;
     pageNumber: number;
     pageSize: number;
@@ -28,7 +28,7 @@ const Patrons : React.FC = () => {
                 const paginatedData = res.data;
                 setState({
                     ...state,
-                    patrons: paginatedData.Data ?? [],
+                    patrons: paginatedData.data,
                     loading: false
                 })
             })

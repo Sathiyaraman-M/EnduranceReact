@@ -33,27 +33,17 @@ const PatronsTable : React.FC<{ patrons: PatronResponse[], loadData : LoadDataMe
                 {
                     patrons.map((patron, index) => (
                         <tr>
-                            <td>{index}</td>
-                            <td>{patron.FirstName} {patron.LastName}</td>
-                            <td>{patron.Email}</td>
-                            <td>{patron.Mobile}</td>
+                            <td>{index + 1}</td>
+                            <td>{patron.firstName} {patron.lastName}</td>
+                            <td>{patron.email}</td>
+                            <td>{patron.mobile}</td>
                             <td>
                                 <Button color="warning" type="submit" className="me-2">Edit</Button>
-                                <Button color="danger" type="submit" className="me-2" onClick={() => deletePatron(patron.Id)}>Delete</Button>
+                                <Button color="danger" type="submit" className="me-2" onClick={() => deletePatron(patron.id)}>Delete</Button>
                             </td>
                         </tr>
                     ))
                 }
-                <tr>
-                    <td>1</td>
-                    <td>Bruce Wayne</td>
-                    <td>bruce@wayne-enterprises.com</td>
-                    <td>6783451378</td>
-                    <td>
-                        <Button color="warning" type="submit" className="me-2">Edit</Button>
-                        <Button color="danger" type="submit" className="me-2">Delete</Button>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </div>
