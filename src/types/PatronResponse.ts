@@ -4,11 +4,11 @@
     lastName: string;
     name: string;
     address: string;
-    dateOfBirth: string;
+    dateOfBirth: Date;
     email: string;
     mobile: string;
     registerId: string;
-    issued: string;
+    issued: Date;
     currentDues: number;
     checkoutsCount: number;
     checkoutsPending: number;
