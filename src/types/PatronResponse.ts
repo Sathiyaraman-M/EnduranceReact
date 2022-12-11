@@ -1,15 +1,16 @@
 ﻿export interface PatronResponse {
-    Id: string;
-    FirstName: string;
-    LastName: string;
-    Address: string;
-    DateOfBirth: Date;
-    Email: string;
-    Mobile: string;
-    RegisterId: string;
-    Issued: Date;
-    CurrentDues: number;
-    CheckoutsCount: number;
-    CheckoutsPending: number;
-    MultipleCheckoutLimit: number;
+    id: string;
+    firstName: string;
+    lastName: string;
+    name: string;
+    address: string;
+    dateOfBirth: string;
+    email: string;
+    mobile: string;
+    registerId: string;
+    issued: string;
+    currentDues: number;
+    checkoutsCount: number;
+    checkoutsPending: number;
+    multipleCheckoutLimit: number;
 } 

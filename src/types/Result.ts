@@ -1,17 +1,22 @@
-﻿export interface Result {
-    Message: string[];
-    Succeeded: boolean;    
+﻿export type Result = {
+    message: string[];
+    succeeded: boolean;    
 }
 
-export interface TypedResult<T> extends Result {
-    Data: T 
+export type TypedResult<T> = {
+    message: string[];
+    succeeded: boolean;
+    data: T 
 }
 
-export interface PaginatedResult<T> extends TypedResult<T> {
-    CurrentPage: number;
-    HasNextPage: boolean;
-    HasPreviousPage: boolean;
-    PageSize: number;
-    TotalCount: number;
-    TotalPages: number
+export type PaginatedResult<T> = {
+    message: string[];
+    succeeded: boolean;
+    data: T[]
+    currentPage: number;
+    hasNextPage: boolean;
+    hasPreviousPage: boolean;
+    pageSize: number;
+    totalCount: number;
+    totalPages: number
 }
